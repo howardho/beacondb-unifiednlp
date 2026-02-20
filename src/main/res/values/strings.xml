@@ -20,4 +20,12 @@
     <string name="pref_description_endpoint">URL to use for geolocation requests</string>
     <string name="pref_title_ignore_rate_limit">Ignore rate limit</string>
     <string name="pref_description_ignore_rate_limit">Whether to request a new location estimate as soon as new Wi-Fi information is available</string>
+    <string name="permission_location_title">Location permission required</string>
+    <string name="permission_location_message">Please grant location permissions to \"Allow all the time\" to provide location correlation</string>
+    <string name="permission_location_background_explanation">We respect your privacy and no data is sent when we perform correlation with becaonDB using your location</string>
+    <string name="permission_ok">OK</string>
+    <string name="permission_cancel">Cancel</string>
+    <string name="permission_retry">Retry</string>
+    <string name="permission_denied_title">Permission not granted</string>
+    <string name="permission_denied_message">Some permissions were not granted and the location service will not work correctly</string>
 </resources>

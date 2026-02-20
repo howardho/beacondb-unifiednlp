@@ -21,4 +21,12 @@
     <string name="pref_description_endpoint">URL to use for geolocation requests</string>
     <string name="pref_title_ignore_rate_limit">Ignore rate limit</string>
     <string name="pref_description_ignore_rate_limit">Whether to request a new location estimate as soon as new Wi-Fi information is available</string>
+    <string name="permission_location_title">Требуется разрешение на определение местоположения</string>
+    <string name="permission_location_message">Пожалуйста предоставьте разрешения на местоположение чтобы обеспечить корреляцию местоположения</string>
+    <string name="permission_location_background_explanation">Мы уважаем вашу конфиденциальность и никакие данные не отправляются когда мы выполняем сопоставление с beaconDB с использованием вашего местоположения</string>
+    <string name="permission_ok">OK</string>
+    <string name="permission_cancel">Отмена</string>
+    <string name="permission_retry">Повторить</string>
+    <string name="permission_denied_title">Разрешение не предоставлено</string>
+    <string name="permission_denied_message">Некоторые разрешения не были предоставлены и служба определения местоположения не будет работать правильно</string>
 </resources>

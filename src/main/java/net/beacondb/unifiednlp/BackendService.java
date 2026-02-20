@@ -5,7 +5,10 @@
 
 package net.beacondb.unifiednlp;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
 import android.os.Process;
@@ -59,6 +62,37 @@ public class BackendService extends HelperLocationBackendService
     @Override
     public synchronized void onCreate() {
         super.onCreate();
+
+        // Check for location permissions and if missing, launch SettingsActivity to request them.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            try {
+                boolean fine = checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
+                boolean coarse = checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED;
+                boolean needBackground = Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q;
+                boolean background = true;
+                if (needBackground) {
+                    try {
+                        background = checkSelfPermission(Manifest.permission.ACCESS_BACKGROUND_LOCATION) == PackageManager.PERMISSION_GRANTED;
+                    } catch (Exception e) {
+                        background = false;
+                        Log.w(TAG, "Background permission check failed", e);
+                    }
+                }
+                if (!fine || !coarse || (needBackground && !background)) {
+                    try {
+                        Intent i = new Intent(this, SettingsActivity.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        i.putExtra("request_location_permissions", true);
+                        startActivity(i);
+                    } catch (Exception e) {
+                        Log.w(TAG, "Failed to launch SettingsActivity to request permissions", e);
+                    }
+                }
+            } catch (Exception e) {
+                Log.w(TAG, "Permission check failed in BackendService", e);
+            }
+        }
+
         reloadSettings();
         reloadInstanceSettings();
     }
@@ -116,7 +150,8 @@ public class BackendService extends HelperLocationBackendService
         reloadSettings();
         instance = this;
         running = true;
-        Log.d(TAG, "Activating instance at process " + Process.myPid());
+        Log.d(TAG, "beaconDB UnifiedNlp provider version " + BuildConfig.APPLICATION_ID + "/" + BuildConfig.VERSION_NAME + "\n"
+        + "Activating instance at process " + Process.myPid());
     }
 
     public static void reloadInstanceSettings() {

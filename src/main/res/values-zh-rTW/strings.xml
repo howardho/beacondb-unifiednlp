@@ -20,4 +20,12 @@
     <string name="pref_description_endpoint">用於地理位置請求的 URL</string>
     <string name="pref_title_ignore_rate_limit">忽略速率限制</string>
     <string name="pref_description_ignore_rate_limit">是否在新的無線資訊可用時立即請求新的位置估算</string>
+    <string name="permission_location_title">需要定位權限</string>
+    <string name="permission_location_message">請授予定位權限以「一律允許」進行位置關聯</string>
+    <string name="permission_location_background_explanation">我們尊重您的隱私因此在使用您的位置與 beaconDB 進行關聯時不會傳送任何資料</string>
+    <string name="permission_ok">確定</string>
+    <string name="permission_cancel">取消</string>
+    <string name="permission_retry">重試</string>
+    <string name="permission_denied_title">未授予權限</string>
+    <string name="permission_denied_message">部分權限未被授予定位服務將無法正常工作</string>
 </resources>
