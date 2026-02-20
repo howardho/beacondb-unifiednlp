@@ -7,15 +7,17 @@
     <string name="app_name">beaconDB UnifiedNlp Backend</string>
     <string name="backend_name">beaconDB</string>
 
+  <!-- pref_version moved to base_strings.xml to avoid intermittent merge omissions -->
+
     <string name="pref_category_source">Data sources</string>
     <string name="pref_title_use_wifis">Use Wi-Fi</string>
     <string name="pref_description_use_wifis">Whether to send Wi-Fi data to the geolocation service</string>
-    <string name="pref_title_use_cells">Use Cell (GSM/UMTS/LTE/CDMA)</string>
-    <string name="pref_description_use_cells">Whether to send Cell data to the geolocation service.\nThis requires Android 4.2 or later.</string>
+    <string name="pref_title_use_cells">Use cellular data (GSM/UMTS/LTE/CDMA)</string>
+    <string name="pref_description_use_cells">Whether to send cellular data to the geolocation service (This requires Android 4.2 or later)</string>
 
     <string name="pref_category_network">Network configuration</string>
     <string name="pref_title_endpoint">Endpoint</string>
     <string name="pref_description_endpoint">URL to use for geolocation requests</string>
     <string name="pref_title_ignore_rate_limit">Ignore rate limit</string>
-    <string name="pref_description_ignore_rate_limit">Whether to request a new location estimate as soon as new WiFi information is available</string>
+    <string name="pref_description_ignore_rate_limit">Whether to request a new location estimate as soon as new Wi-Fi information is available</string>
 </resources>

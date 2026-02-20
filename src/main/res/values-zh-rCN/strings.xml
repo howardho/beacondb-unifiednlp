@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ SPDX-FileCopyrightText: 2015 microG Project Team
+  ~ SPDX-License-Identifier: Apache-2.0
+  -->
+<resources>
+    <string name="app_name">beaconDB UnifiedNlp Backend</string>
+    <string name="backend_name">beaconDB</string>
+
+    <string name="pref_version">版本</string>
+
+    <string name="pref_category_source">数据源</string>
+    <string name="pref_title_use_wifis">使用 Wi-Fi</string>
+    <string name="pref_description_use_wifis">是否向地理位置服务发送无线数据</string>
+    <string name="pref_title_use_cells">使用蜂窝网络 (GSM/UMTS/LTE/CDMA)</string>
+    <string name="pref_description_use_cells">是否向地理位置服务发送蜂窝数据 (此功能需要 Android 4.2 或更高版本)</string>
+
+    <string name="pref_category_network">网络配置</string>
+    <string name="pref_title_endpoint">端点</string>
+    <string name="pref_description_endpoint">用于地理位置请求的 URL</string>
+    <string name="pref_title_ignore_rate_limit">忽略速率限制</string>
+    <string name="pref_description_ignore_rate_limit">是否在新的无线信息可用时立即请求新的位置估算</string>
+</resources>

@@ -6,6 +6,13 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <Preference
+        android:key="version"
+        android:title="@string/pref_version"
+        android:summary="@string/version_name"
+        android:selectable="false"
+        android:persistent="false" />
+
     <PreferenceCategory android:title="@string/pref_category_source">
         <CheckBoxPreference
             android:defaultValue="true"
@@ -22,8 +29,8 @@
 
     <PreferenceCategory android:title="@string/pref_category_network">
         <EditTextPreference
-            android:defaultValue="https://beacondb.net/v1/geolocate"
-            android:dialogMessage="Default: https://beacondb.net/v1/geolocate"
+            android:defaultValue="https://api.beacondb.net/v1/geolocate"
+            android:dialogMessage="Default: https://api.beacondb.net/v1/geolocate"
             android:key="endpoint"
             android:summary="@string/pref_description_endpoint"
             android:title="@string/pref_title_endpoint" />
