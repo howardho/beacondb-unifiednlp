@@ -16,7 +16,7 @@
     <string name="pref_description_use_cells">是否向地理位置服務發送蜂窩數據 (這需要 Android 4.2 或更高版本)</string>
 
     <string name="pref_category_network">網路設定</string>
-    <string name="pref_title_endpoint">端點</string>
+    <string name="pref_title_endpoint">端點 URL</string>
     <string name="pref_description_endpoint">用於地理位置請求的 URL</string>
     <string name="pref_title_ignore_rate_limit">忽略速率限制</string>
     <string name="pref_description_ignore_rate_limit">是否在新的無線資訊可用時立即請求新的位置估算</string>

@@ -17,7 +17,7 @@
     <string name="pref_description_use_cells">Czy wysyłać dane telefonii komórkowej do usługi geolokalizacji (Wymaga Androida 4.2 lub nowszego)</string>
 
     <string name="pref_category_network">Network configuration</string>
-    <string name="pref_title_endpoint">Endpoint</string>
+    <string name="pref_title_endpoint">Endpoint URL</string>
     <string name="pref_description_endpoint">URL to use for geolocation requests</string>
     <string name="pref_title_ignore_rate_limit">Ignore rate limit</string>
     <string name="pref_description_ignore_rate_limit">Whether to request a new location estimate as soon as new Wi-Fi information is available</string>
